@@ -19,7 +19,6 @@ var note = new apn.Notification({
 // The topic is usually the bundle identifier of your application.
 note.topic = "com.wuxizone.smart";
 note.badge = 1;
-
 console.log(`Sending: ${note.compile()} to ${tokens}`);
 service.send(note, tokens).then( result => {
 	console.log("sent:", result.sent.length);
